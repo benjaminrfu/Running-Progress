@@ -1,0 +1,263 @@
+/* DATA 303 Final Project Website Template */
+
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #5f6b7a;
+  --blue-dark: #123c69;
+  --blue: #2f6fa3;
+  --blue-light: #e7f0f8;
+  --border: #d9e2ec;
+  --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.hero {
+  color: white;
+  background:
+    linear-gradient(rgba(18, 60, 105, 0.88), rgba(18, 60, 105, 0.88)),
+    radial-gradient(circle at top left, #4f9bd3, #123c69);
+  padding-bottom: 4.5rem;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 0;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.subtitle {
+  max-width: 720px;
+  margin: 1.2rem auto 0;
+  font-size: 1.25rem;
+  opacity: 0.95;
+}
+
+.authors {
+  margin-top: 1.2rem;
+  font-weight: 700;
+}
+
+main {
+  margin-top: -2.5rem;
+}
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.section.narrow {
+  max-width: 900px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: var(--blue-dark);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--blue-dark);
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 850px;
+}
+
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.question-card,
+.data-card,
+.takeaway {
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.question-card p,
+.data-card li,
+.takeaway p {
+  color: var(--muted);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.data-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.figure-block {
+  display: grid;
+  grid-template-columns: 0.9fr 1.5fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.figure-block:first-of-type {
+  border-top: none;
+}
+
+.figure-label {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: #eef3f8;
+}
+
+figcaption {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.tableau-placeholder {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--border);
+  border-radius: 18px;
+  background: #fbfdff;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.takeaway {
+  margin-top: 1rem;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+  background: #eef3f8;
+}
+
+@media (max-width: 850px) {
+  .question-grid,
+  .two-column,
+  .figure-block {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-block {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.4rem;
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
+}

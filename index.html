@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking Running Progress Through Strava Data</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a href="#question">Question</a>
+      <a href="#data">Data</a>
+      <a href="#visuals">Visuals</a>
+      <a href="#takeaways">Takeaways</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">DATA 303 Final Project</p>
+      <h1>Tracking Running Progress Through Strava Data</h1>
+      <p class="subtitle">
+        An analysis of pace, heart rate, and training consistency from 2023–2026.
+      </p>
+      <p class="authors">Benjamin Fu and Athena Liao</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="question" class="section narrow">
+      <h2>Research Question</h2>
+      <p class="lead">
+        How has Ben’s running fitness changed from 2023 to 2026, and what patterns in pace,
+        heart rate, and training volume explain that progress?
+      </p>
+
+      <div class="question-grid">
+        <div class="question-card">
+          <h3>1. Pace</h3>
+          <p>Has average running pace improved over time?</p>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Efficiency</h3>
+          <p>Has heart rate decreased at similar pace ranges?</p>
+        </div>
+
+        <div class="question-card">
+          <h3>3. Consistency</h3>
+          <p>Do changes in training volume help explain periods of improvement?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="data" class="section">
+      <div class="two-column">
+        <div>
+          <h2>Data and Cleaning</h2>
+          <p>
+            This project uses Ben’s personal Strava export, which includes 588 activities
+            recorded between 2023 and 2026. The original file contained many variables that
+            were either empty or not relevant to the final analysis, so the data was cleaned
+            before visualization.
+          </p>
+          <p>
+            The cleaning process included filtering to running activities, removing columns
+            with large amounts of missing data, converting dates into usable time variables,
+            converting distance into miles, and creating a pace variable measured in minutes
+            per mile. These steps made the data easier to interpret from a runner’s perspective.
+          </p>
+        </div>
+
+        <aside class="data-card">
+          <h3>Dataset Summary</h3>
+          <ul>
+            <li><strong>Source:</strong> Personal Strava export</li>
+            <li><strong>Time period:</strong> 2023–2026</li>
+            <li><strong>Original size:</strong> 588 activities</li>
+            <li><strong>Main variables:</strong> distance, date, pace, heart rate, year, month</li>
+            <li><strong>Goal:</strong> evaluate running progress over time</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="visuals" class="section">
+      <h2>Visual Analysis</h2>
+      <p class="section-intro">
+        The figures below are placeholders. Replace the image files in the <code>images</code>
+        folder with your final exported Python or Tableau visuals. The text can also be edited
+        once the final figures are complete.
+      </p>
+
+      <article class="figure-block">
+        <div class="figure-text">
+          <p class="figure-label">Figure 1</p>
+          <h3>Running Pace Over Time, 2023–2026</h3>
+          <p>
+            Each point represents one run, while the trendline shows the overall pace pattern
+            more clearly. This figure helps answer whether Ben’s running pace has changed
+            over time and whether specific training periods correspond with faster running.
+          </p>
+        </div>
+        <figure>
+          <img src="images/pace_trend.png" alt="Running pace trend over time" />
+          <figcaption>
+            Replace this placeholder with the final pace-over-time visualization.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="figure-block">
+        <div class="figure-text">
+          <p class="figure-label">Figure 2</p>
+          <h3>Average Heart Rate at Similar Paces by Year</h3>
+          <p>
+            This chart compares heart rate across similar pace ranges. A lower heart rate
+            at the same pace can suggest improved running efficiency, even when raw pace
+            alone does not show dramatic change.
+          </p>
+        </div>
+        <figure>
+          <img src="images/heart_rate_by_pace.png" alt="Average heart rate at similar paces by year" />
+          <figcaption>
+            Replace this placeholder with the final heart-rate-by-pace visualization.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="figure-block">
+        <div class="figure-text">
+          <p class="figure-label">Figure 3</p>
+          <h3>Monthly Running Mileage</h3>
+          <p>
+            Monthly mileage provides context for changes in fitness. If higher-mileage months
+            line up with faster pace or lower heart rate, this supports the idea that consistency
+            was a major driver of improvement.
+          </p>
+        </div>
+        <figure>
+          <img src="images/monthly_mileage.png" alt="Monthly running mileage from 2023 to 2026" />
+          <figcaption>
+            Replace this placeholder with the final monthly mileage visualization.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="figure-block">
+        <div class="figure-text">
+          <p class="figure-label">Figure 4</p>
+          <h3>Distance and Pace Relationship</h3>
+          <p>
+            This figure helps separate short, fast efforts from longer endurance runs. It can
+            show whether improvements are mostly coming from shorter speed workouts or from
+            stronger performance across longer distances.
+          </p>
+        </div>
+        <figure>
+          <img src="images/distance_vs_pace.png" alt="Relationship between run distance and pace" />
+          <figcaption>
+            Replace this placeholder with the final distance-versus-pace visualization.
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="tableau" class="section">
+      <h2>Optional Tableau Dashboard Embed</h2>
+      <p class="section-intro">
+        If you create a Tableau Public dashboard, you can embed it here. Replace the placeholder
+        below with the embed code from Tableau Public: <strong>Share → Embed Code</strong>.
+      </p>
+
+      <div class="tableau-placeholder">
+        <p>Tableau dashboard embed goes here.</p>
+      </div>
+
+      <!--
+      TABLEAU EMBED EXAMPLE:
+
+      1. Publish your dashboard to Tableau Public.
+      2. Click Share.
+      3. Copy the Embed Code.
+      4. Paste it here and delete the placeholder div above.
+      -->
+    </section>
+
+    <section id="takeaways" class="section narrow">
+      <h2>Key Takeaways</h2>
+
+      <div class="takeaway">
+        <h3>1. Pace alone does not tell the full story.</h3>
+        <p>
+          Pace is useful, but it can be affected by distance, workout type, weather, terrain,
+          and training purpose. Looking at pace alongside heart rate gives a more complete
+          picture of running progress.
+        </p>
+      </div>
+
+      <div class="takeaway">
+        <h3>2. Heart rate at similar paces suggests improved efficiency.</h3>
+        <p>
+          If the final chart continues to show lower heart rate at similar paces in later years,
+          that would suggest Ben became more efficient as a runner over time.
+        </p>
+      </div>
+
+      <div class="takeaway">
+        <h3>3. Training consistency helps explain improvement.</h3>
+        <p>
+          Monthly mileage can show whether stronger running periods were connected to more
+          consistent training. This helps move the analysis beyond describing progress and
+          toward explaining why it may have happened.
+        </p>
+      </div>
+    </section>
+
+    <section class="section narrow">
+      <h2>Conclusion</h2>
+      <p>
+        Overall, this project uses personal running data to evaluate improvement from multiple
+        angles. The combination of pace trends, heart rate comparisons, and training volume
+        provides a clearer picture than any single metric alone. The final results suggest that
+        running progress should be measured not only by faster times, but also by improved
+        efficiency and consistent training habits.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>DATA 303 Final Project · Benjamin Fu and Athena Liao</p>
+  </footer>
+</body>
+</html>
