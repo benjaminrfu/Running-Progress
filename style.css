@@ -127,7 +127,7 @@ h3 {
 
 .section-intro {
   color: var(--muted);
-  max-width: 850px;
+  max-width: 1000px;
 }
 
 .question-grid {
@@ -198,6 +198,33 @@ img {
   border-radius: 18px;
   border: 1px solid var(--border);
   background: #eef3f8;
+  padding: 0.5rem;
+}
+
+.interactive-chart {
+  display: block;
+  width: 935px;
+  height: 460px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #eef3f8;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+
+.full-width-figure {
+  display: block;
+}
+
+.full-width-figure .figure-text {
+  max-width: 850px;
+  margin-bottom: 1.5rem;
+}
+
+.full-width-figure figure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 figcaption {
@@ -206,15 +233,18 @@ figcaption {
   font-size: 0.92rem;
 }
 
-.tableau-placeholder {
-  min-height: 420px;
-  display: grid;
-  place-items: center;
-  border: 2px dashed var(--border);
+.tableau-embed {
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
   border-radius: 18px;
-  background: #fbfdff;
-  color: var(--muted);
-  font-weight: 700;
+  background: #eef3f8;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.tableauPlaceholder {
+  width: 100%;
 }
 
 .takeaway {

@@ -17,21 +17,20 @@
     </nav>
 
     <div class="hero-content">
-      <p class="eyebrow">DATA 303 Final Project</p>
+      
       <h1>Tracking Running Progress Through Strava Data</h1>
       <p class="subtitle">
-        An analysis of pace, heart rate, and training consistency from 2023–2026.
+        An analysis of pace, heart rate, and training consistency from an amateur runner
       </p>
-      <p class="authors">Benjamin Fu and Athena Liao</p>
     </div>
   </header>
 
   <main>
     <section id="question" class="section narrow">
-      <h2>Research Question</h2>
+      <h2>Core Project Goal</h2>
       <p class="lead">
-        How has Ben’s running fitness changed from 2023 to 2026, and what patterns in pace,
-        heart rate, and training volume explain that progress?
+        Ben is an amateur runner who began running his freshman year of college. He has the long-term goal of improving his running performance and is curious about whether his current training has led to improvements. Through this project, we aim to understand how Ben’s running fitness has changed from 2023 to 2026, and what patterns in pace,
+        heart rate, and training volume explain that progress.
       </p>
 
       <div class="question-grid">
@@ -57,15 +56,15 @@
         <div>
           <h2>Data and Cleaning</h2>
           <p>
-            This project uses Ben’s personal Strava export, which includes 588 activities
+            This project uses Ben’s personal Strava data, which includes 588 activities
             recorded between 2023 and 2026. The original file contained many variables that
-            were either empty or not relevant to the final analysis, so the data was cleaned
+            were either empty or not relevant to our analysis, so the data was cleaned
             before visualization.
           </p>
           <p>
             The cleaning process included filtering to running activities, removing columns
             with large amounts of missing data, converting dates into usable time variables,
-            converting distance into miles, and creating a pace variable measured in minutes
+            converting distance from km to miles, and creating a pace variable measured in minutes
             per mile. These steps made the data easier to interpret from a runner’s perspective.
           </p>
         </div>
@@ -73,7 +72,7 @@
         <aside class="data-card">
           <h3>Dataset Summary</h3>
           <ul>
-            <li><strong>Source:</strong> Personal Strava export</li>
+            <li><strong>Source:</strong> Personal Strava data</li>
             <li><strong>Time period:</strong> 2023–2026</li>
             <li><strong>Original size:</strong> 588 activities</li>
             <li><strong>Main variables:</strong> distance, date, pace, heart rate, year, month</li>
@@ -84,28 +83,22 @@
     </section>
 
     <section id="visuals" class="section">
-      <h2>Visual Analysis</h2>
+      <h2>Data Visualizations</h2>
       <p class="section-intro">
-        The figures below are placeholders. Replace the image files in the <code>images</code>
-        folder with your final exported Python or Tableau visuals. The text can also be edited
-        once the final figures are complete.
+        The following visualizations explore Ben's running progress through various angles: pace over time, heart rate efficiency, and training consistency. Together, they give insights onto whether Ben has improved in running speed, as well as in efficiency and consistency.
       </p>
 
       <article class="figure-block">
         <div class="figure-text">
           <p class="figure-label">Figure 1</p>
-          <h3>Running Pace Over Time, 2023–2026</h3>
+          <h3>Running Pace Over Time</h3>
           <p>
-            Each point represents one run, while the trendline shows the overall pace pattern
-            more clearly. This figure helps answer whether Ben’s running pace has changed
-            over time and whether specific training periods correspond with faster running.
+            Each point represents one recorded run, while the trendline smooths out day-to-day variation to show the overall pace pattern. Since pace is measured in minutes per mile, lower values indicate faster runs. Overall, Ben's pace appears to decrease slightly over time. This suggests gradual improvement. The most noticeable drop occurs in late 2025 and early 2026, which aligns with the period when Ben was training for a half marathon and completing more structured runs at under 7-minute paces.
           </p>
+
         </div>
         <figure>
           <img src="images/pace_trend.png" alt="Running pace trend over time" />
-          <figcaption>
-            Replace this placeholder with the final pace-over-time visualization.
-          </figcaption>
         </figure>
       </article>
 
@@ -114,103 +107,122 @@
           <p class="figure-label">Figure 2</p>
           <h3>Average Heart Rate at Similar Paces by Year</h3>
           <p>
-            This chart compares heart rate across similar pace ranges. A lower heart rate
-            at the same pace can suggest improved running efficiency, even when raw pace
-            alone does not show dramatic change.
+            This chart compares Ben's average heart rate across similar pace ranges by year. Across the same pace groups, Ben's heart rate generally decreases over time, especially compared with 2023. This is a really good sign because it suggests that Ben's body has become more efficient at running the same speeds. In other words, even though pace has not dramatically improved since he began running, Ben is now able to sustain that pace with less cardiovascular effort.
           </p>
         </div>
         <figure>
           <img src="images/heart_rate_by_pace.png" alt="Average heart rate at similar paces by year" />
-          <figcaption>
-            Replace this placeholder with the final heart-rate-by-pace visualization.
           </figcaption>
         </figure>
       </article>
 
-      <article class="figure-block">
+      <article class="figure-block full-width-figure">
         <div class="figure-text">
           <p class="figure-label">Figure 3</p>
-          <h3>Monthly Running Mileage</h3>
+          <h3>Monthly Running Mileage Heatmap</h3>
           <p>
-            Monthly mileage provides context for changes in fitness. If higher-mileage months
-            line up with faster pace or lower heart rate, this supports the idea that consistency
-            was a major driver of improvement.
+            The heatmap shows Ben's monthly running mileage from 2023 to 2026. Darker blue cells represent higher-mileage months. The heatmap provides context for the overall project by showing when Ben trained more consistently and built higher running volume. We can see that mileage appears to increase during the summer of 2025. During this time, Ben had more time to run. Mileage again increases in early 2026 as he began training for a half marathon. These higher-volume periods may help explain the improvements seen in pace and heart rate efficiency over time.
           </p>
         </div>
         <figure>
-          <img src="images/monthly_mileage.png" alt="Monthly running mileage from 2023 to 2026" />
-          <figcaption>
-            Replace this placeholder with the final monthly mileage visualization.
-          </figcaption>
+          <iframe 
+            src="images/monthly_mileage_heatmap.html"
+            class="interactive-chart"
+            title="Monthly Running Mileage Heatmap">
+          </iframe>
         </figure>
       </article>
 
-      <article class="figure-block">
+      <article class="figure-block full-width-figure">
         <div class="figure-text">
           <p class="figure-label">Figure 4</p>
-          <h3>Distance and Pace Relationship</h3>
+          <h3>Running Volume and Training Intensity Over Time</h3>
           <p>
-            This figure helps separate short, fast efforts from longer endurance runs. It can
-            show whether improvements are mostly coming from shorter speed workouts or from
-            stronger performance across longer distances.
+            This interactive Tableau visualization shows how Ben's run distance and training intensity has changed over time. Each dot represents one recorded run. The y-axis shows distance in miles and the x-axis shows the training date. The size and darkness of each dot are based on Relative Effort, a Strava metric that estimates how hard an activity was based on factors such as heart rate, duration, elevation, etc. Viewers can filter by Relative Effort to focus on harder runs. They can also hover over each dot to see details such as the run date, distance, activity name, and effort level. One interesting pattern is that the dots appear larger and darker earlier in the dataset, become ligher around mid-2025, and then become darker in early 2026. This would suggest that Ben's training intensity decreased for a period before increasing again during half-marathon training. The large dark dot around March 2026 represents his half marathon - it required a much greater effort as it was longer and more intense than a daily training run.
           </p>
         </div>
+
         <figure>
-          <img src="images/distance_vs_pace.png" alt="Relationship between run distance and pace" />
-          <figcaption>
-            Replace this placeholder with the final distance-versus-pace visualization.
-          </figcaption>
+          <div class="tableau-embed">
+            <div class='tableauPlaceholder' id='viz1778461366659' style='position: relative'>
+              <noscript>
+                <a href='#'>
+                  <img alt='Running Volume and Training Intensity Over Time'
+                      src='https://public.tableau.com/static/images/Be/BensWorkbook-2/RunningVolume/1_rss.png'
+                      style='border: none' />
+                </a>
+              </noscript>
+
+              <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='BensWorkbook-2/RunningVolume' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Be/BensWorkbook-2/RunningVolume/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+                <param name='filter' value='publish=yes' />
+              </object>
+            </div>
+
+            <script type='text/javascript'>
+              var divElement = document.getElementById('viz1778461366659');
+              var vizElement = divElement.getElementsByTagName('object')[0];
+
+              vizElement.style.width = '100%';
+              vizElement.style.height = '650px';
+
+              var scriptElement = document.createElement('script');
+              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+              vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+          </div>
         </figure>
       </article>
     </section>
 
     <section id="tableau" class="section">
-      <h2>Optional Tableau Dashboard Embed</h2>
+      <h2>Training Consistency Calendar</h2>
       <p class="section-intro">
-        If you create a Tableau Public dashboard, you can embed it here. Replace the placeholder
-        below with the embed code from Tableau Public: <strong>Share → Embed Code</strong>.
+        This interactive Tableau visualization shows Ben's running consistency, by weekday and week of the year. Each square represents a recorded running day. The darkness of the square is based on the number of miles run that day - Darker blue squares indicate higher-mileage runs, while blank spaces represent days or weeks where no run was recorded. Viewers can use the year filter to compare training consistency across different years. Note that 2023 and 2026 are incomplete since I began recording runs September 2023 and the data ends in April 2026. Viewers can hover over each square to see details of the run. This visual connects to the overall purpose of the project by showing that running improvement is not just about pace or heart rate. It also is about consistency in training over time. This visual helps identify periods where Ben was running frequently at long distances, or taking breaks. One interesting insight to note is that in 2023, The majority of Ben's runs were on Monday, Wednesday, or Friday; at that time, Ben scheduled his runs on those days as it worked best with his schedule.
       </p>
 
       <div class="tableau-placeholder">
-        <p>Tableau dashboard embed goes here.</p>
+        <p><div class='tableauPlaceholder' id='viz1778460413050' style='position: relative'><noscript><a href='#'><img alt='2023 Training Consistency Calendar ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;YN&#47;YN2BG87HM&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;YN2BG87HM' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;YN&#47;YN2BG87HM&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1778460413050');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='400px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
       </div>
 
-      <!--
-      TABLEAU EMBED EXAMPLE:
 
-      1. Publish your dashboard to Tableau Public.
-      2. Click Share.
-      3. Copy the Embed Code.
-      4. Paste it here and delete the placeholder div above.
-      -->
     </section>
 
     <section id="takeaways" class="section narrow">
       <h2>Key Takeaways</h2>
 
       <div class="takeaway">
-        <h3>1. Pace alone does not tell the full story.</h3>
+        <h3>1. Ben’s running pace improved gradually over time.</h3>
         <p>
-          Pace is useful, but it can be affected by distance, workout type, weather, terrain,
-          and training purpose. Looking at pace alongside heart rate gives a more complete
-          picture of running progress.
+          The pace trend suggests that Ben became slightly faster from 2023 to 2026. There is noticeable improvement occurring in late 2025 and early 2026. Since pace is measured in minutes per mile, the downward trend indicates faster running. This improvement aligns with a period where Ben was training harder, as he was preparing for a half marathon.
+
+        </p>
         </p>
       </div>
 
       <div class="takeaway">
         <h3>2. Heart rate at similar paces suggests improved efficiency.</h3>
         <p>
-          If the final chart continues to show lower heart rate at similar paces in later years,
-          that would suggest Ben became more efficient as a runner over time.
+          Ben’s average heart rate appears to decrease at similar pace ranges from 2023 to 2026. This suggests that he became a more efficient runner as he could maintain similar speeds with less cardiovascular effort.
         </p>
       </div>
 
       <div class="takeaway">
-        <h3>3. Training consistency helps explain improvement.</h3>
+        <h3>3. More consistent training helped support improvement.</h3>
         <p>
-          Monthly mileage can show whether stronger running periods were connected to more
-          consistent training. This helps move the analysis beyond describing progress and
-          toward explaining why it may have happened.
+          The mileage heatmap and Tableau training consistency chart show strong mileage in summer 2025 and early 2026. These higher-mileage and more consistent periods help explain improvements in Ben’s pace and heart rate efficiency over time.
         </p>
       </div>
     </section>
@@ -218,17 +230,16 @@
     <section class="section narrow">
       <h2>Conclusion</h2>
       <p>
-        Overall, this project uses personal running data to evaluate improvement from multiple
-        angles. The combination of pace trends, heart rate comparisons, and training volume
-        provides a clearer picture than any single metric alone. The final results suggest that
-        running progress should be measured not only by faster times, but also by improved
-        efficiency and consistent training habits.
+        This project utilized Ben's personal Strava data to evaluate his running progress. The combination of pace trends, heart rate comparisons, monthly mileage, and training consistency provides a clearer picture than any single metric alone. The results suggest that Ben has progressed in running performance gradually over time, especially during periods of higher mileage. Additionally, the project shows that progress should not only be measured by faster times. Other factors such as improved efficiency, lower heart rate at similar paces, and more consistent training habits are also important indicators of progress.
       </p>
-    </section>
+      <p>
+        As a runner, this project was rewarding and interesting. It turned everyday training data into a meaningful story of improvement. It showed how data visualization can help explain whether training is actually working and where progress may be coming from. Hopefully, this project inspires other runners to explore their own running data. Platforms like Strava make it easy and free to collect useful information over time. For Ben, this project also serves as motivation to keep running, keep tracking progress, and continue using data analysis and visualization techniques.
+      </p>
+</section>
   </main>
 
   <footer>
-    <p>DATA 303 Final Project · Benjamin Fu and Athena Liao</p>
+    <p>Benjamin Fu and Athena Liao</p>
   </footer>
 </body>
 </html>
